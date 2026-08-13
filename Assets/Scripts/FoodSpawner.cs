@@ -4,6 +4,7 @@ public class FoodSpawner : MonoBehaviour
 {
 
     public GameObject cakePrefab;
+    public GameManager gameManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +18,7 @@ public class FoodSpawner : MonoBehaviour
         
     }
 
-    void SpawnCake()
+    public void SpawnCake()
     {
         Vector3 spawnPosition =
             new Vector3
@@ -30,6 +31,7 @@ public class FoodSpawner : MonoBehaviour
         
         Cake newCake = Instantiate(cakePrefab, spawnPosition, Quaternion.identity).GetComponent<Cake>();
         newCake.foodSpawner = this;
+        newCake.gameManager = gameManager;
     }
 
     

@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f2b926884453a4e998d144a93886dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodSpawner: {fileID: 0}
+  gameManager: {fileID: 0}
+  points: 10
