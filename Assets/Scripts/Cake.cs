@@ -4,6 +4,7 @@ public class Cake : MonoBehaviour
 {
 
     GameObject cakePrefab;
+    public FoodSpawner foodSpawner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
