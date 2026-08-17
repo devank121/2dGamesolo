@@ -3,7 +3,6 @@ using UnityEngine;
 public class FoodSpawner : MonoBehaviour
 {
 
-    public GameObject cakePrefab;
     public GameManager gameManager;
     public GameObject[] cakePrefabs;
     public GameObject[] negativePrefabs;
@@ -43,7 +42,11 @@ public class FoodSpawner : MonoBehaviour
         }
         else
         {
-
+            int randomNegativeIndex = Random.Range(0, negativePrefabs.Length);
+            GameObject selectedNegative = negativePrefabs[randomNegativeIndex];
+            GameObject spawnedObject = Instantiate(selectedNegative, spawnPosition, Quaternion.identity);
+            Bomb newBomb = spawnedObject.GetComponent<Bomb>();
+            newBomb.gameManager = gameManager;
         }
         
         
