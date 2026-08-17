@@ -5,6 +5,7 @@ public class FoodSpawner : MonoBehaviour
 
     public GameObject cakePrefab;
     public GameManager gameManager;
+    public GameObject[] cakePrefabs;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
