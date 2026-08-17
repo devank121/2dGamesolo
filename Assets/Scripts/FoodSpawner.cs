@@ -47,6 +47,7 @@ public class FoodSpawner : MonoBehaviour
             GameObject spawnedObject = Instantiate(selectedNegative, spawnPosition, Quaternion.identity);
             Bomb newBomb = spawnedObject.GetComponent<Bomb>();
             newBomb.gameManager = gameManager;
+            newBomb.foodSpawner = this;
         }
         
         

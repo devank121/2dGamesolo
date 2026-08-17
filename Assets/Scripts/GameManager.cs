@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text heartsText;
     public int score;
     public int hearts = 5;
-    
+    public GameObject gameOverPanel;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour
     {
         hearts -= 1;
         heartsText.text = "Hearts: " + hearts;
+        if (hearts < 1)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
    
 }
