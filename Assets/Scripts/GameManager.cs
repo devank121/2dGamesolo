@@ -37,5 +37,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-   
+    public void RestartGame()
+    {
+        score = 0;
+        hearts = 5;
+        scoreText.text = "Score: " + score;
+        heartsText.text = "Hearts: " + hearts;
+        gameOverPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
 }
