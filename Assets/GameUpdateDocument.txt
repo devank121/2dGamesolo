@@ -1,0 +1,51 @@
+Food Smacker Ultimate (Käännetty tekoälyllä)
+Pelissä ruudulle ilmestyy paljon ruokaa. Pelaajan pitää lyödä kaikki kakut ja yrittää saada mahdollisimman korkea pistemäärä.
+Pelissä on tallennusominaisuus, joten pelaaja voi nähdä oman ennätyksensä ja yrittää rikkoa sen.
+•	5 erilaista ruokatyyppiä
+•	Jokainen ruoka antaa eri määrän pisteitä
+•	3 erilaista negatiivista esinettä, jotka vähentävät pisteitä tai aiheuttavat pelaajan häviämisen
+•	Pelaaja häviää myös, jos hän ei osu viiteen ruokaan
+Pelin käyttöliittymä sisältää:
+•	Pelaajalla on 5 sydäntä
+•	Pelaajan ennätyspisteet
+•	Pause-/asetukset-valikko (jos aikaa jää)
+
+
+Food Smacker Ultimate (Orignal)
+
+A bunch of food will pop up on the screen, and the player must smack all the food and try to score a high score.
+The game will have a progress saving function as in the player can see his highest score and try to beat it.
+5 different types of cakes
+Each food has different amounts of points it gives to the player.
+And 3 different negatives to deduct points or make the user lose.
+The player also loses if he mises to smack 5 foods.
+The games’ UI will include:
+-	Players 5 hearts
+-	Players high score
+-	(Pause/settings menu) – maybe, if I have enough time
+
+Okay the proto is done, Now adding the previous tasks that i failed to do before
+
+
+Task 5 & 6 
+Idamageable and GetDeathEvent
+
+Since my game doesn’t have a “player” that can interact with gameobjects when in proximity, I came up with this solution:
+Make the cursor a “player”. Add an "imposter food" which will have the danger zone and when the player (Cursor) approaches it, it detects it with 2dcollider and starts the bomb wave, so the cakes stop spawning for a while and the player has to "fight" the bombs. So, this makes it possible for me to add all the things asked to add. Although it is an inconvenient approach for the task, I want to take this route because I am too lazy to make a whole new game to be able to add these tasks. 
+
+Teacher's requirement	Cake Smacker implementation
+
+
+EnemySpawner	        Controls the bomb wave
+CircleCollider2D	Imposter Food's danger zone
+Is Trigger	        Detects cursor entering
+OnTriggerEnter2D	Starts the wave
+Coroutine	        Spawns bombs every second
+Max 5 enemies	        Max 5 bombs alive
+20 enemies total	20 bombs per wave
+IDamageable	        Bomb implements it
+UnityAction	        Bomb death event
+OnEnemyDead()	        Spawner reacts to bomb death
+Destroy spawner	        Wave ends after all 20 are defeated
+
+
