@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
-public class Bomb : MonoBehaviour
+public class Bomb : MonoBehaviour, IDamageable
 {
     public GameManager gameManager;
     public FoodSpawner foodSpawner;
     private Coroutine bombTimer;
+    private UnityAction deathEvent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,5 +35,10 @@ public class Bomb : MonoBehaviour
         foodSpawner.SpawnCake();
         Destroy(gameObject);
 
+    }
+
+    public UnityAction GetDeathEvent()
+    {
+        return deathEvent;
     }
 }
