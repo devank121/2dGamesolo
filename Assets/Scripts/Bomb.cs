@@ -26,6 +26,7 @@ public class Bomb : MonoBehaviour, IDamageable
         gameManager.LoseHeart();
         foodSpawner.SpawnCake();
         StopCoroutine(bombTimer);
+        deathEvent?.Invoke();
         Destroy(gameObject);
     }
 
