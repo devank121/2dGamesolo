@@ -34,6 +34,7 @@ public class Bomb : MonoBehaviour, IDamageable
     {
         yield return new WaitForSeconds(2f);
         foodSpawner.SpawnCake();
+        deathEvent?.Invoke();
         Destroy(gameObject);
 
     }
@@ -41,5 +42,10 @@ public class Bomb : MonoBehaviour, IDamageable
     public UnityAction GetDeathEvent()
     {
         return deathEvent;
+    }
+
+    public void AddDeathListener(UnityAction listener)
+    {
+        deathEvent += listener;
     }
 }

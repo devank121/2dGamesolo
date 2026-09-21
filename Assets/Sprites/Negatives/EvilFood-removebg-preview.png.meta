@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f678a00d5eab6ae4b9ab0fc9134e059b
+guid: 30f942f3254548143bd8147b763f39b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1483665779731714255
-    second: Bomb_0
+      213: 7985529166331027042
+    second: EvilFood-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bomb_0
+      name: EvilFood-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 360
-        height: 360
+        x: 62
+        y: 47
+        width: 157
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13f20b985d5f86be0800000000000000
-      internalID: -1483665779731714255
+      spriteID: 26e9ea6b77c42de60800000000000000
+      internalID: 7985529166331027042
       vertices: []
       indices: 
       edges: []

@@ -6,6 +6,7 @@ public class FoodSpawner : MonoBehaviour
     public GameManager gameManager;
     public GameObject[] cakePrefabs;
     public GameObject[] negativePrefabs;
+    public bool isPaused = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +21,10 @@ public class FoodSpawner : MonoBehaviour
 
     public void SpawnCake()
     {
+        if (isPaused)
+        {
+            return;
+        }
         int randomNumber = Random.Range(0, 100);
         Vector3 spawnPosition =
             new Vector3
